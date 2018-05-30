@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>1-formularz</title>
+    
+    
 </head>
 
 <body>
@@ -10,14 +12,19 @@
 <h2>Zadanie 2 - formularz</h2>
 
 <form method="POST" action="https://formspree.io/gracjanostrowski@gmail.com"><br>
-    <input type="text" name="Imię" placeholder="Imię" autofocus><br>
-    <input type="text" name="Nazwisko" placeholder="Nazwisko"><br>
-    <input type="email" name="Adres e-mail" placeholder="Adres e-mail"><br>
-    <input type="number" name="Numer telefonu" placeholder="Numer telefonu"><br>
+    <label for="imie">Imię*:</label><br>
+    <input type="text" name="Imię" placeholder="Jan" id="imie" autofocus required><br><br>
+    <label for="nazwisko">Nazwisko*:</label><br>
+    <input type="text" name="Nazwisko" placeholder="Kowalski" id="nazwisko" required><br><br>
+    <label for="mail">Adres e-mail*:</label><br>
+    <input type="email" name="Adres e-mail" placeholder="przyklad@serwer.pl" id="mail" required><br><br>
+    <label for="telefon">Numer telefonu:</label><br>
+    <input type="number" name="Numer telefonu" placeholder="888-222-111"><br>
 
 <br>  
    
-    <select name="Miasto">
+    <label for="miasto">Miasto*:</label><br>   
+    <select name="Miasto" id="miasto" required>
         <option disabled selected>Wybierz miasto...</option>
         <option value="Kraków">Kraków</option>
         <option value="Warszawa">Warszawa</option>
@@ -32,10 +39,13 @@
 <br>
     
     <input type="checkbox" id="checkbox" required>
-    <label for="checkbox">Zgadzam się na przetwarzanie moich danych osobowych</label><br><br>
+    <label for="checkbox">Zgadzam się na przetwarzanie moich danych osobowych*</label><br><br>
     
     <textarea maxlength="500" name="Wiadomość" rows="5" cols="50" placeholder="Twoja wiadomość (do 500 znaków)"></textarea><br>
+    <p>* - pola wymagane</p><br>
     <input type="submit" value="Wyślij">
+    
+   
     
 </form>
  

@@ -10,35 +10,34 @@
 <h2>Zadanie 2 - formularz</h2>
 
 <form method="POST" action="https://formspree.io/gracjanostrowski@gmail.com"><br>
-    <input type="text" name="Imię" placeholder="Imię"><br>
+    <input type="text" name="Imię" placeholder="Imię" autofocus><br>
     <input type="text" name="Nazwisko" placeholder="Nazwisko"><br>
-    <input type="email" name="Mail" placeholder="Adres e-mail"><br>
-    <input type="text" name="Telefon" placeholder="Numer telefonu"><br>
+    <input type="email" name="Adres e-mail" placeholder="Adres e-mail"><br>
+    <input type="number" name="Numer telefonu" placeholder="Numer telefonu"><br>
 
 <br>  
    
     <select name="miasto">
-        <option>Wybierz miasto...</option>
-        <option value="krakow">Kraków</option>
-        <option value="warszawa">Warszawa</option>
-        <option value="gdansk">Gdańsk</option>
+        <option disabled selected>Wybierz miasto...</option>
+        <option value="Kraków">Kraków</option>
+        <option value="Warszawa">Warszawa</option>
+        <option value="Gdańsk">Gdańsk</option>
     </select><br><br>
 
-    <input type="radio" name="gender" value="Mezczyzna">Mężczyzna<br>
-    <input type="radio" name="gender" value="Kobieta">Kobieta<br>
+    <input type="radio" name="Płeć" value="Mężczyzna" id="male">
+    <label for="male">Mężczyzna</label><br>
+    <input type="radio" name="Płeć" value="Kobieta" id="female">
+    <label for="female">Kobieta</label><br>
 
 <br>
     
-    <label><input type="checkbox">Zgadzam się na przetwarzanie moich danych osobowych</label><br><br>
+    <input type="checkbox" id="checkbox" required>
+    <label for="checkbox">Zgadzam się na przetwarzanie moich danych osobowych</label><br><br>
     
-    <textarea name="Wiadomosc" placeholder="Twoja wiadomość"></textarea><br>
-    <button type="submit">Wyślij</button>
+    <textarea maxlength="500" name="Wiadomość" rows="5" cols="50" placeholder="Twoja wiadomość (do 500 znaków)"></textarea><br>
+    <input type="submit" value="Wyślij">
+    
 </form>
-
-
-
-
-
  
     
     
